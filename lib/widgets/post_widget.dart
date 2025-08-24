@@ -8,17 +8,17 @@ import 'package:instagram/widgets/text_button_widget.dart';
 class PostWidget extends StatelessWidget {
   final String avatar;
   final String name;
-  final String location;
+  final String publishedTime;
   final String thumbnail;
-  final int likes;
+  final Map meta;
 
   const PostWidget({
     super.key,
     required this.avatar,
     required this.name,
-    required this.location,
+    required this.publishedTime,
     required this.thumbnail,
-    required this.likes,
+    required this.meta,
   });
 
   @override
@@ -26,7 +26,7 @@ class PostWidget extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.all(16),
-      margin: EdgeInsets.only(left: 16, right: 16, bottom: 24),
+      margin: EdgeInsets.only(left: 16, right: 16, bottom: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Color(AppColorConstant.secondry), width: 2),
@@ -71,7 +71,7 @@ class PostWidget extends StatelessWidget {
                       ),
                       SizedBox(height: 4),
                       Text(
-                        location,
+                        publishedTime,
                         style: TextStyle(
                           color: Color(AppColorConstant.naturalGray),
                         ),
@@ -102,11 +102,13 @@ class PostWidget extends StatelessWidget {
                 spacing: 8,
                 children: [
                   IconTextButton(
-                    value: likes.toString(),
-                    icon: IconWidget(
-                      src: "assets/icons/bold/heart.svg",
-                      color: Colors.red,
-                    ),
+                    value: meta["likes"].toString(),
+                    icon: meta["isLiked"]
+                        ? IconWidget(
+                            src: "assets/icons/bold/heart.svg",
+                            color: Colors.red,
+                          )
+                        : IconWidget(src: "assets/icons/linear/heart.svg"),
                     isRowAlign: true,
                   ),
                   IconButtonWidget(
@@ -135,7 +137,6 @@ class PostWidget extends StatelessWidget {
                     child: Stack(
                       children: [
                         Positioned(
-                          left: 40,
                           child: Container(
                             width: 32,
                             height: 32,
@@ -148,11 +149,12 @@ class PostWidget extends StatelessWidget {
                             ),
                             clipBehavior: Clip.hardEdge,
                             child: Image.asset(
-                              "assets/images/user-post3.png",
+                              "assets/images/user-post1.png",
                               fit: BoxFit.cover,
                             ),
                           ),
                         ),
+
                         Positioned(
                           left: 20,
                           child: Container(
@@ -173,6 +175,7 @@ class PostWidget extends StatelessWidget {
                           ),
                         ),
                         Positioned(
+                          left: 40,
                           child: Container(
                             width: 32,
                             height: 32,
@@ -185,7 +188,7 @@ class PostWidget extends StatelessWidget {
                             ),
                             clipBehavior: Clip.hardEdge,
                             child: Image.asset(
-                              "assets/images/user-post1.png",
+                              "assets/images/user-post3.png",
                               fit: BoxFit.cover,
                             ),
                           ),

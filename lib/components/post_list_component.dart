@@ -11,16 +11,22 @@ class PostListComponent extends StatelessWidget {
         PostWidget(
           avatar: "assets/images/user1.png",
           name: "Ali",
-          location: "2h ago",
+          publishedTime: "2h ago",
           thumbnail: "assets/images/post1.png",
-          likes: 640,
+          meta : {
+            "likes" : 640,
+            "isLiked" : true
+          }
         ),
         PostWidget(
           avatar: "assets/images/user5.png",
           name: "Saman",
-          location: "2h ago",
+          publishedTime: "2h ago",
           thumbnail: "assets/images/post1.png",
-          likes: 239,
+          meta: {
+            "likes" : 239,
+            "isLiked" : false
+          },
         ),
       ],
     );
