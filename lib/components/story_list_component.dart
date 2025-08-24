@@ -11,27 +11,22 @@ class StoryListComponent extends StatelessWidget {
     scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          SizedBox(width: 16,),
-          YourStoryWidget(label: "Your story"),
-          SizedBox(width: 16),
+          YourStoryWidget(name: "Your story"),
           UserStoryWidget(
             name: "Ali",
             avatar: "assets/images/user1.png",
             isActive: true,
           ),
-          SizedBox(width: 16),
           UserStoryWidget(
             name: "Roya",
             avatar: "assets/images/user2.png",
             isActive: false,
           ),
-          SizedBox(width: 16),
           UserStoryWidget(
             name: "Mehdi",
             avatar: "assets/images/user3.png",
             isActive: false,
           ),
-          SizedBox(width: 16),
           UserStoryWidget(
             name: "Reza",
             avatar: "assets/images/user4.png",

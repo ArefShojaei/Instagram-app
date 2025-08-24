@@ -15,37 +15,45 @@ class UserStoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        GestureDetector(
-          child: Container(
-            width: 80,
-            height: 80,
-            padding: EdgeInsets.all(4),
-            decoration: BoxDecoration(
-              border: Border.all(
-                width: 2,
-                color: isActive
-                    ? Color(AppColorConstant.accent)
-                    : Color(AppColorConstant.secondry),
-              ),
-              borderRadius: BorderRadius.circular(50),
-            ),
+    return Container(
+      margin: EdgeInsets.only(left: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          GestureDetector(
             child: Container(
-              width: 72,
-              height: 72,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
-              clipBehavior: Clip.hardEdge,
-              child: Image.asset(avatar, fit: BoxFit.cover,),
+              width: 80,
+              height: 80,
+              padding: EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 2,
+                  color: isActive
+                      ? Color(AppColorConstant.accent)
+                      : Color(AppColorConstant.secondry),
+                ),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Center(
+                child: Container(
+                  width: 72,
+                  height: 72,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  clipBehavior: Clip.hardEdge,
+                  child: Image.asset(avatar, fit: BoxFit.cover),
+                ),
+              ),
             ),
           ),
-        ),
-        SizedBox(height: 12),
-        Text(
-          name,
-          style: TextStyle(color: Color(AppColorConstant.naturalWhite)),
-        ),
-      ],
+          SizedBox(height: 12),
+          Text(
+            name,
+            style: TextStyle(color: Color(AppColorConstant.naturalWhite)),
+          ),
+        ],
+      ),
     );
   }
 }
