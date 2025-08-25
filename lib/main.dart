@@ -20,8 +20,7 @@ class InstagramApp extends StatelessWidget {
             surfaceTintColor: Color(AppColorConstant.primary),
             backgroundColor: Color(AppColorConstant.primary)
         ),
-        textTheme: GoogleFonts.robotoTextTheme(),
-        fontFamily: "Poppins"
+        textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       home: HomeScreen(),
     );

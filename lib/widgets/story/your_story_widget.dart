@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/constants/app_color_constant.dart';
 import 'package:instagram/widgets/icon_widget.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 class YourStoryWidget extends StatelessWidget {
   final String name;
-  
+
   const YourStoryWidget({super.key, required this.name});
 
   @override
@@ -15,18 +16,19 @@ class YourStoryWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           GestureDetector(
-            child: Container(
+            child: SizedBox(
               width: 80,
               height: 80,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 2,
+              child: DottedBorder(
+                options: RoundedRectDottedBorderOptions(
+                  dashPattern: [4, 4],
+                  strokeWidth: 2,
+                  radius: Radius.circular(50),
                   color: Color(AppColorConstant.secondry),
                 ),
-                borderRadius: BorderRadius.circular(50),
-              ),
-              child: Center(
-                child: IconWidget(src: "assets/icons/linear/add.svg"),
+                child: Center(
+                  child: IconWidget(src: "assets/icons/linear/add.svg"),
+                ),
               ),
             ),
           ),
