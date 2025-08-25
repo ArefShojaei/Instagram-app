@@ -21,7 +21,7 @@ class TextButtonWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Text(
-          "More",
+          value,
           style: TextStyle(color: Color(AppColorConstant.naturalGray)),
         ),
       ),
