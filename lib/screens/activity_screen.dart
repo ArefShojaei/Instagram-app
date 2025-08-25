@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram/components/bottom_navigationbar_component.dart';
 import 'package:instagram/constants/app_color_constant.dart';
 import 'package:instagram/widgets/icon_button_widget.dart';
 import 'package:instagram/widgets/icon_widget.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:instagram/widgets/text_button_widget.dart';
 
 class ActivityScreen extends StatelessWidget {
   const ActivityScreen({super.key});
