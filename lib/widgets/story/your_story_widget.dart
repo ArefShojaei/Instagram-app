@@ -24,7 +24,7 @@ class YourStoryWidget extends StatelessWidget {
                   dashPattern: [4, 4],
                   strokeWidth: 2,
                   radius: Radius.circular(50),
-                  color: Color(AppColorConstant.secondry),
+                  color: Color(AppColorConstant.secondry2),
                 ),
                 child: Center(
                   child: IconWidget(src: "assets/icons/linear/add.svg"),
