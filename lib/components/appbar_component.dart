@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/widgets/icon_button_widget.dart';
-import 'package:instagram/widgets/logo_widget.dart';
 
 class AppbarComponent extends StatelessWidget implements PreferredSizeWidget {
-  final LogoWidget logo;
-  final List<IconButtonWidget> actions;
-  final double paddingLeft;
-  final double paddingRight;
+  final Widget title;
+  final List<Widget>? actions;
+  final bool? centerTitle;
 
   const AppbarComponent({
     super.key,
-    required this.logo,
-    required this.actions,
-    required this.paddingLeft,
-    required this.paddingRight,
+    required this.title,
+    this.actions,
+    this.centerTitle
   });
 
   @override
@@ -21,16 +17,9 @@ class AppbarComponent extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leading: null,
       automaticallyImplyLeading: false,
-      title: Row(
-        children: [
-          SizedBox(width: paddingLeft),
-          logo,
-        ],
-      ),
-      actions: [
-        ...actions,
-        SizedBox(width: paddingRight),
-      ],
+      title: title,
+      actions: actions,
+      centerTitle: centerTitle,
     );
   }
 
