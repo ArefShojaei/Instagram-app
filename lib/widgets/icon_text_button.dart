@@ -7,29 +7,38 @@ class IconTextButton extends StatelessWidget {
   final bool isRowAlign;
   final IconWidget icon;
   final String value;
+  final VoidCallback? onClick;
 
-  const IconTextButton({super.key, required this.value, required this.icon, required this.isRowAlign});
+  const IconTextButton({
+    super.key,
+    required this.value,
+    required this.icon,
+    required this.isRowAlign,
+    this.onClick,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return this.isRowAlign ? Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        IconButtonWidget(icon: icon),
-        Text(
-          value,
-          style: TextStyle(color: Color(AppColorConstant.naturalWhite)),
-        ),
-      ],
-    ): Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        IconButtonWidget(icon: icon),
-        Text(
-          value,
-          style: TextStyle(color: Color(AppColorConstant.naturalWhite)),
-        ),
-      ],
-    );
+    return isRowAlign
+        ? Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              IconButtonWidget(icon: icon, onClick: onClick),
+              Text(
+                value,
+                style: TextStyle(color: Color(AppColorConstant.white)),
+              ),
+            ],
+          )
+        : Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              IconButtonWidget(icon: icon, onClick: onClick),
+              Text(
+                value,
+                style: TextStyle(color: Color(AppColorConstant.white)),
+              ),
+            ],
+          );
   }
 }

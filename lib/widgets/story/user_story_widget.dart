@@ -30,7 +30,7 @@ class UserStoryWidget extends StatelessWidget {
                   width: 2,
                   color: isActive
                       ? Color(AppColorConstant.accent)
-                      : Color(AppColorConstant.secondry),
+                      : Color(AppColorConstant.secondry2),
                 ),
                 borderRadius: BorderRadius.circular(50),
               ),
@@ -48,10 +48,7 @@ class UserStoryWidget extends StatelessWidget {
             ),
           ),
           SizedBox(height: 12),
-          Text(
-            name,
-            style: TextStyle(color: Color(AppColorConstant.naturalWhite)),
-          ),
+          Text(name, style: TextStyle(color: Color(AppColorConstant.white))),
         ],
       ),
     );

@@ -10,9 +10,6 @@ class IconWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-        src, 
-        color: color ?? Color(AppColorConstant.naturalWhite)
-    );
+    return SvgPicture.asset(src, color: color ?? Color(AppColorConstant.white));
   }
 }

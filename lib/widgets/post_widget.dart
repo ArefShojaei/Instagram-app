@@ -5,12 +5,12 @@ import 'package:instagram/widgets/icon_text_button.dart';
 import 'package:instagram/widgets/icon_widget.dart';
 import 'package:instagram/widgets/text_button_widget.dart';
 
-class PostWidget extends StatelessWidget {
+class PostWidget extends StatefulWidget {
   final String avatar;
   final String name;
   final String publishedTime;
   final String thumbnail;
-  final Map meta;
+  final Map<String, dynamic> meta;
 
   const PostWidget({
     super.key,
@@ -20,6 +20,34 @@ class PostWidget extends StatelessWidget {
     required this.thumbnail,
     required this.meta,
   });
+
+  @override
+  State<PostWidget> createState() => _PostWidgetState();
+}
+
+class _PostWidgetState extends State<PostWidget> {
+  late bool _isLikedPost;
+  late String _likeIconWeight;
+  late String _likeIconPath;
+  late Color _likeIconColor;
+  late int _postLikeCount;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _isLikedPost = widget.meta["isLiked"];
+
+    _likeIconColor = _isLikedPost
+        ? Color(AppColorConstant.red)
+        : Color(AppColorConstant.white);
+
+    _likeIconWeight = _isLikedPost ? "bold" : "linear";
+
+    _likeIconPath = "assets/icons/$_likeIconWeight/heart.svg";
+
+    _postLikeCount = widget.meta["likes"];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +73,7 @@ class PostWidget extends StatelessWidget {
                     height: 40,
                     margin: EdgeInsets.only(right: 12),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(AppColorConstant.naturalWhite),
-                      ),
+                      border: Border.all(color: Color(AppColorConstant.white)),
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: Container(
@@ -57,24 +83,20 @@ class PostWidget extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset(avatar, fit: BoxFit.cover),
+                      child: Image.asset(widget.avatar, fit: BoxFit.cover),
                     ),
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        name,
-                        style: TextStyle(
-                          color: Color(AppColorConstant.naturalWhite),
-                        ),
+                        widget.name,
+                        style: TextStyle(color: Color(AppColorConstant.white)),
                       ),
                       SizedBox(height: 4),
                       Text(
-                        publishedTime,
-                        style: TextStyle(
-                          color: Color(AppColorConstant.naturalGray),
-                        ),
+                        widget.publishedTime,
+                        style: TextStyle(color: Color(AppColorConstant.gray)),
                       ),
                     ],
                   ),
@@ -91,7 +113,7 @@ class PostWidget extends StatelessWidget {
             height: 210,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
             clipBehavior: Clip.hardEdge,
-            child: Image.asset(thumbnail, fit: BoxFit.cover),
+            child: Image.asset(widget.thumbnail, fit: BoxFit.cover),
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -102,14 +124,10 @@ class PostWidget extends StatelessWidget {
                 spacing: 8,
                 children: [
                   IconTextButton(
-                    value: meta["likes"].toString(),
-                    icon: meta["isLiked"]
-                        ? IconWidget(
-                            src: "assets/icons/bold/heart.svg",
-                            color: Colors.red,
-                          )
-                        : IconWidget(src: "assets/icons/linear/heart.svg"),
+                    value: _postLikeCount.toString(),
+                    icon: IconWidget(src: _likeIconPath, color: _likeIconColor),
                     isRowAlign: true,
+                    onClick: _likePostHandler,
                   ),
                   IconButtonWidget(
                     icon: IconWidget(src: "assets/icons/linear/message.svg"),
@@ -199,17 +217,35 @@ class PostWidget extends StatelessWidget {
                   SizedBox(width: 8),
                   Text(
                     "Looking forward to...",
-                    style: TextStyle(
-                      color: Color(AppColorConstant.naturalWhite),
-                    ),
+                    style: TextStyle(color: Color(AppColorConstant.white)),
                   ),
                 ],
               ),
-              TextButtonWidget(value: "More", handler: () {}),
+              TextButtonWidget(value: "More", onClick: () {}),
             ],
           ),
         ],
       ),
     );
+  }
+
+  void _likePostHandler() {
+    setState(() {
+      _isLikedPost = !_isLikedPost;
+
+      if (!_isLikedPost) {
+        _postLikeCount--;
+        _likeIconColor = Color(AppColorConstant.white);
+        _likeIconWeight = "linear";
+        _likeIconPath = "assets/icons/$_likeIconWeight/heart.svg";
+      }
+
+      if (_isLikedPost) {
+        _postLikeCount++;
+        _likeIconColor = Color(AppColorConstant.red);
+        _likeIconWeight = "bold";
+        _likeIconPath = "assets/icons/$_likeIconWeight/heart.svg";
+      }
+    });
   }
 }

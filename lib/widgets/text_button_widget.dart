@@ -3,12 +3,12 @@ import 'package:instagram/constants/app_color_constant.dart';
 
 class TextButtonWidget extends StatelessWidget {
   final String value;
-  final Function handler;
+  final VoidCallback? onClick;
 
   const TextButtonWidget({
     super.key,
     required this.value,
-    required this.handler,
+    required this.onClick,
   });
 
   @override
@@ -17,14 +17,15 @@ class TextButtonWidget extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
         decoration: BoxDecoration(
-          border: Border.all(color: Color(AppColorConstant.naturalGray)),
+          border: Border.all(color: Color(AppColorConstant.gray)),
           borderRadius: BorderRadius.circular(20),
         ),
         child: Text(
           value,
-          style: TextStyle(color: Color(AppColorConstant.naturalGray)),
+          style: TextStyle(color: Color(AppColorConstant.gray)),
         ),
       ),
+      onTap: onClick,
     );
   }
 }

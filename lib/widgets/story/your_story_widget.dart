@@ -33,10 +33,7 @@ class YourStoryWidget extends StatelessWidget {
             ),
           ),
           SizedBox(height: 12),
-          Text(
-            name,
-            style: TextStyle(color: Color(AppColorConstant.naturalWhite)),
-          ),
+          Text(name, style: TextStyle(color: Color(AppColorConstant.white))),
         ],
       ),
     );
