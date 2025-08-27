@@ -138,7 +138,7 @@ class _PostWidgetState extends State<PostWidget> {
                 ],
               ),
               IconButtonWidget(
-                icon: IconWidget(src: "assets/icons/linear/Bookmark 3.svg"),
+                icon: IconWidget(src: "assets/icons/linear/bookmark.svg"),
               ),
             ],
           ),
