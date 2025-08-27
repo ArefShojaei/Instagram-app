@@ -3,7 +3,7 @@ import 'package:instagram/components/appbar_component.dart';
 import 'package:instagram/components/story_list_component.dart';
 import 'package:instagram/components/post_list_component.dart';
 import 'package:instagram/components/bottom_navigationbar_component.dart';
-import 'package:instagram/constants/app_color_constant.dart';
+import 'package:instagram/enums/page_route_enum.dart';
 import 'package:instagram/widgets/icon_button_widget.dart';
 import 'package:instagram/widgets/icon_widget.dart';
 import 'package:instagram/widgets/logo_widget.dart';
@@ -37,28 +37,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationbarComponent(
-        children: <IconButtonWidget>[
-          IconButtonWidget(
-            icon: IconWidget(
-              src: "assets/icons/bold/home.svg",
-              color: Color(AppColorConstant.accent),
-            ),
-          ),
-          IconButtonWidget(
-            icon: IconWidget(src: "assets/icons/linear/search.svg"),
-          ),
-          IconButtonWidget(
-            icon: IconWidget(src: "assets/icons/linear/add.svg"),
-          ),
-          IconButtonWidget(
-            icon: IconWidget(src: "assets/icons/linear/heart.svg"),
-          ),
-          IconButtonWidget(
-            icon: IconWidget(src: "assets/icons/linear/profile.svg"),
-          ),
-        ],
-      ),
+      bottomNavigationBar: BottomNavigationbarComponent(activePageIndex: PageRouteEnum.home.index,),
     );
   }
 }

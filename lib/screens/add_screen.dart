@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram/components/appbar_component.dart';
 import 'package:instagram/components/bottom_navigationbar_component.dart';
 import 'package:instagram/constants/app_color_constant.dart';
-import 'package:instagram/widgets/icon_button_widget.dart';
-import 'package:instagram/widgets/icon_widget.dart';
+import 'package:instagram/enums/page_route_enum.dart';
 
 class AddScreen extends StatelessWidget {
   const AddScreen({super.key});
@@ -24,28 +23,7 @@ class AddScreen extends StatelessWidget {
           style: TextStyle(color: Color(AppColorConstant.white)),
         ),
       ),
-      bottomNavigationBar: BottomNavigationbarComponent(
-        children: <IconButtonWidget>[
-          IconButtonWidget(
-            icon: IconWidget(src: "assets/icons/linear/home.svg"),
-          ),
-          IconButtonWidget(
-            icon: IconWidget(src: "assets/icons/linear/search.svg"),
-          ),
-          IconButtonWidget(
-            icon: IconWidget(
-              src: "assets/icons/bold/add.svg",
-              color: Color(AppColorConstant.accent),
-            ),
-          ),
-          IconButtonWidget(
-            icon: IconWidget(src: "assets/icons/linear/heart.svg"),
-          ),
-          IconButtonWidget(
-            icon: IconWidget(src: "assets/icons/linear/profile.svg"),
-          ),
-        ],
-      ),
+      bottomNavigationBar: BottomNavigationbarComponent(activePageIndex: PageRouteEnum.add.index,),
     );
   }
 }
