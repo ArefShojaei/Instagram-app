@@ -15,16 +15,16 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppbarComponent(
-        paddingLeft: 16,
-        paddingRight: 16,
-        logo: const LogoWidget(src: "assets/images/logo.png"),
-        actions: const <IconButtonWidget>[
+        title: LogoWidget(src: "assets/images/logo.png"),
+        actions: const <Widget>[
           IconButtonWidget(
             icon: IconWidget(src: "assets/icons/linear/notification.svg"),
           ),
+          SizedBox(width: 16),
           IconButtonWidget(
             icon: IconWidget(src: "assets/icons/linear/send.svg"),
           ),
+          SizedBox(width: 16),
         ],
       ),
       body: SingleChildScrollView(

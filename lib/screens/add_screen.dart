@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/components/appbar_component.dart';
 import 'package:instagram/components/bottom_navigationbar_component.dart';
 import 'package:instagram/constants/app_color_constant.dart';
 import 'package:instagram/widgets/icon_button_widget.dart';
@@ -10,23 +11,17 @@ class AddScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: null,
-        leadingWidth: 0,
-        automaticallyImplyLeading: false,
+      appBar: AppbarComponent(
         title: Text(
           "Add",
-          style: TextStyle(
-            color: Color(AppColorConstant.naturalWhite),
-            fontSize: 14,
-          ),
+          style: TextStyle(color: Color(AppColorConstant.white), fontSize: 14),
         ),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
           "Soon...",
-          style: TextStyle(color: Color(AppColorConstant.naturalWhite)),
+          style: TextStyle(color: Color(AppColorConstant.white)),
         ),
       ),
       bottomNavigationBar: BottomNavigationbarComponent(

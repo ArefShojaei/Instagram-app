@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/components/appbar_component.dart';
 import 'package:instagram/components/bottom_navigationbar_component.dart';
 import 'package:instagram/constants/app_color_constant.dart';
 import 'package:instagram/widgets/icon_button_widget.dart';
@@ -11,9 +12,7 @@ class ExploreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: null,
-        automaticallyImplyLeading: false,
+      appBar: AppbarComponent(
         title: Container(
           width: double.infinity,
           height: 48,
@@ -22,7 +21,7 @@ class ExploreScreen extends StatelessWidget {
             vertical: 12,
           ),
           decoration: BoxDecoration(
-            border: Border.all(color: Color(AppColorConstant.naturalGray)),
+            border: Border.all(color: Color(AppColorConstant.gray)),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Row(
@@ -32,11 +31,11 @@ class ExploreScreen extends StatelessWidget {
               SizedBox(width: 12),
               Expanded(
                 child: TextField(
-                  style: TextStyle(color: Color(AppColorConstant.naturalGray)),
+                  style: TextStyle(color: Color(AppColorConstant.gray)),
                   decoration: InputDecoration(
                     hintText: 'Search',
                     hintStyle: TextStyle(
-                      color: Color(AppColorConstant.naturalGray),
+                      color: Color(AppColorConstant.gray),
                       fontSize: 14,
                     ),
                     border: InputBorder.none,
@@ -61,7 +60,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -76,7 +74,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 2,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -91,7 +88,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -106,7 +102,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -121,7 +116,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -136,7 +130,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -151,7 +144,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -166,7 +158,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -181,7 +172,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -196,7 +186,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 2,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -211,7 +200,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,
@@ -226,7 +214,6 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisCellCount: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.hardEdge,

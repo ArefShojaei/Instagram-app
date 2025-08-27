@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:instagram/components/appbar_component.dart';
 import 'package:instagram/components/bottom_navigationbar_component.dart';
 import 'package:instagram/constants/app_color_constant.dart';
 import 'package:instagram/widgets/icon_button_widget.dart';
@@ -12,10 +13,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: null,
-        leadingWidth: 0,
-        automaticallyImplyLeading: false,
+      appBar: AppbarComponent(
         title: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -24,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
             Text(
               "@ArefShojaei",
               style: GoogleFonts.poppins(
-                color: Color(AppColorConstant.naturalWhite),
+                color: Color(AppColorConstant.white),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -55,7 +53,7 @@ class ProfileScreen extends StatelessWidget {
                     height: 120,
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: Color(AppColorConstant.naturalWhite),
+                        color: Color(AppColorConstant.white),
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(500),
@@ -78,7 +76,7 @@ class ProfileScreen extends StatelessWidget {
                   Text(
                     "Aref Shojaei",
                     style: GoogleFonts.poppins(
-                      color: Color(AppColorConstant.naturalWhite),
+                      color: Color(AppColorConstant.white),
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                     ),
@@ -87,7 +85,7 @@ class ProfileScreen extends StatelessWidget {
                   Text(
                     "Software developer",
                     style: GoogleFonts.poppins(
-                      color: Color(AppColorConstant.naturalGray),
+                      color: Color(AppColorConstant.gray),
                       fontSize: 12,
                     ),
                   ),
@@ -173,7 +171,7 @@ class ProfileScreen extends StatelessWidget {
                         Text(
                           "68",
                           style: TextStyle(
-                            color: Color(AppColorConstant.naturalWhite),
+                            color: Color(AppColorConstant.white),
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
                           ),
@@ -184,7 +182,7 @@ class ProfileScreen extends StatelessWidget {
                     Text(
                       "Following",
                       style: TextStyle(
-                        color: Color(AppColorConstant.naturalGray),
+                        color: Color(AppColorConstant.gray),
                         fontSize: 12,
                       ),
                     ),
@@ -264,7 +262,7 @@ class ProfileScreen extends StatelessWidget {
                         Text(
                           "2.3K",
                           style: TextStyle(
-                            color: Color(AppColorConstant.naturalWhite),
+                            color: Color(AppColorConstant.white),
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
                           ),
@@ -275,7 +273,7 @@ class ProfileScreen extends StatelessWidget {
                     Text(
                       "Followers",
                       style: TextStyle(
-                        color: Color(AppColorConstant.naturalGray),
+                        color: Color(AppColorConstant.gray),
                         fontSize: 12,
                       ),
                     ),
@@ -315,7 +313,7 @@ class ProfileScreen extends StatelessWidget {
                     Text(
                       "14",
                       style: TextStyle(
-                        color: Color(AppColorConstant.naturalWhite),
+                        color: Color(AppColorConstant.white),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -330,7 +328,7 @@ class ProfileScreen extends StatelessWidget {
                     Text(
                       "3",
                       style: TextStyle(
-                        color: Color(AppColorConstant.naturalWhite),
+                        color: Color(AppColorConstant.white),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -345,7 +343,7 @@ class ProfileScreen extends StatelessWidget {
                     Text(
                       "129",
                       style: TextStyle(
-                        color: Color(AppColorConstant.naturalWhite),
+                        color: Color(AppColorConstant.white),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -360,7 +358,7 @@ class ProfileScreen extends StatelessWidget {
                     Text(
                       "+500",
                       style: TextStyle(
-                        color: Color(AppColorConstant.naturalWhite),
+                        color: Color(AppColorConstant.white),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -385,7 +383,10 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset("assets/images/explore/post.jpg", fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/images/explore/post.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   StaggeredGridTile.count(
@@ -397,7 +398,10 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset("assets/images/explore/post1.jpg", fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/images/explore/post1.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   StaggeredGridTile.count(
@@ -409,7 +413,10 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset("assets/images/explore/post2.jpg", fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/images/explore/post2.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   StaggeredGridTile.count(
@@ -421,7 +428,10 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset("assets/images/explore/post3.jpg", fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/images/explore/post3.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   StaggeredGridTile.count(
@@ -433,7 +443,10 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset("assets/images/explore/post4.jpg", fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/images/explore/post4.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   StaggeredGridTile.count(
@@ -445,7 +458,10 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset("assets/images/explore/post5.jpg", fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/images/explore/post5.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   StaggeredGridTile.count(
@@ -457,7 +473,10 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset("assets/images/explore/post6.jpg", fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/images/explore/post6.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   StaggeredGridTile.count(
@@ -469,7 +488,10 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset("assets/images/explore/post7.jpg", fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/images/explore/post7.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   StaggeredGridTile.count(
@@ -481,7 +503,10 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: Image.asset("assets/images/explore/post8.jpg", fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/images/explore/post8.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ],

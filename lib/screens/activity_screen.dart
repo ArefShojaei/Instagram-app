@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/components/appbar_component.dart';
 import 'package:instagram/components/bottom_navigationbar_component.dart';
 import 'package:instagram/constants/app_color_constant.dart';
 import 'package:instagram/widgets/icon_button_widget.dart';
@@ -10,16 +11,10 @@ class ActivityScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: null,
-        leadingWidth: 0,
-        automaticallyImplyLeading: false,
+      appBar: AppbarComponent(
         title: Text(
           "Activity",
-          style: TextStyle(
-            color: Color(AppColorConstant.naturalWhite),
-            fontSize: 14,
-          ),
+          style: TextStyle(color: Color(AppColorConstant.white), fontSize: 14),
         ),
         centerTitle: true,
       ),
@@ -37,16 +32,12 @@ class ActivityScreen extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
                       decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color(AppColorConstant.naturalGray),
-                        ),
+                        border: Border.all(color: Color(AppColorConstant.gray)),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
                         "More",
-                        style: TextStyle(
-                          color: Color(AppColorConstant.naturalGray),
-                        ),
+                        style: TextStyle(color: Color(AppColorConstant.gray)),
                       ),
                     ),
                   ),
@@ -71,16 +62,12 @@ class ActivityScreen extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
                       decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color(AppColorConstant.naturalGray),
-                        ),
+                        border: Border.all(color: Color(AppColorConstant.gray)),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
                         "Comments",
-                        style: TextStyle(
-                          color: Color(AppColorConstant.naturalGray),
-                        ),
+                        style: TextStyle(color: Color(AppColorConstant.gray)),
                       ),
                     ),
                   ),
@@ -89,16 +76,12 @@ class ActivityScreen extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
                       decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color(AppColorConstant.naturalGray),
-                        ),
+                        border: Border.all(color: Color(AppColorConstant.gray)),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
                         "Mentions",
-                        style: TextStyle(
-                          color: Color(AppColorConstant.naturalGray),
-                        ),
+                        style: TextStyle(color: Color(AppColorConstant.gray)),
                       ),
                     ),
                   ),
@@ -115,7 +98,7 @@ class ActivityScreen extends StatelessWidget {
                   Text(
                     "Likes (23)",
                     style: TextStyle(
-                      color: Color(AppColorConstant.naturalGray),
+                      color: Color(AppColorConstant.gray),
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                     ),
@@ -126,9 +109,7 @@ class ActivityScreen extends StatelessWidget {
                     margin: EdgeInsets.only(bottom: 8),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(AppColorConstant.naturalGray),
-                      ),
+                      border: Border.all(color: Color(AppColorConstant.gray)),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -144,7 +125,7 @@ class ActivityScreen extends StatelessWidget {
                               margin: EdgeInsets.only(right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: Color(AppColorConstant.naturalWhite),
+                                  color: Color(AppColorConstant.white),
                                 ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
@@ -167,7 +148,7 @@ class ActivityScreen extends StatelessWidget {
                                 Text(
                                   "Sarah",
                                   style: TextStyle(
-                                    color: Color(AppColorConstant.naturalWhite),
+                                    color: Color(AppColorConstant.white),
                                   ),
                                 ),
                                 SizedBox(height: 4),
@@ -177,9 +158,7 @@ class ActivityScreen extends StatelessWidget {
                                     Text(
                                       "Liked your post ",
                                       style: TextStyle(
-                                        color: Color(
-                                          AppColorConstant.naturalWhite,
-                                        ),
+                                        color: Color(AppColorConstant.white),
                                         fontSize: 10,
                                       ),
                                     ),
@@ -216,9 +195,7 @@ class ActivityScreen extends StatelessWidget {
                     margin: EdgeInsets.only(bottom: 8),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(AppColorConstant.naturalGray),
-                      ),
+                      border: Border.all(color: Color(AppColorConstant.gray)),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -234,7 +211,7 @@ class ActivityScreen extends StatelessWidget {
                               margin: EdgeInsets.only(right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: Color(AppColorConstant.naturalWhite),
+                                  color: Color(AppColorConstant.white),
                                 ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
@@ -257,7 +234,7 @@ class ActivityScreen extends StatelessWidget {
                                 Text(
                                   "Sarah",
                                   style: TextStyle(
-                                    color: Color(AppColorConstant.naturalWhite),
+                                    color: Color(AppColorConstant.white),
                                   ),
                                 ),
                                 SizedBox(height: 4),
@@ -267,9 +244,7 @@ class ActivityScreen extends StatelessWidget {
                                     Text(
                                       "Liked your post ",
                                       style: TextStyle(
-                                        color: Color(
-                                          AppColorConstant.naturalWhite,
-                                        ),
+                                        color: Color(AppColorConstant.white),
                                         fontSize: 10,
                                       ),
                                     ),
@@ -306,9 +281,7 @@ class ActivityScreen extends StatelessWidget {
                     margin: EdgeInsets.only(bottom: 8),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(AppColorConstant.naturalGray),
-                      ),
+                      border: Border.all(color: Color(AppColorConstant.gray)),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -324,7 +297,7 @@ class ActivityScreen extends StatelessWidget {
                               margin: EdgeInsets.only(right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: Color(AppColorConstant.naturalWhite),
+                                  color: Color(AppColorConstant.white),
                                 ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
@@ -347,7 +320,7 @@ class ActivityScreen extends StatelessWidget {
                                 Text(
                                   "Sarah",
                                   style: TextStyle(
-                                    color: Color(AppColorConstant.naturalWhite),
+                                    color: Color(AppColorConstant.white),
                                   ),
                                 ),
                                 SizedBox(height: 4),
@@ -357,9 +330,7 @@ class ActivityScreen extends StatelessWidget {
                                     Text(
                                       "Liked your post ",
                                       style: TextStyle(
-                                        color: Color(
-                                          AppColorConstant.naturalWhite,
-                                        ),
+                                        color: Color(AppColorConstant.white),
                                         fontSize: 10,
                                       ),
                                     ),
@@ -396,9 +367,7 @@ class ActivityScreen extends StatelessWidget {
                     margin: EdgeInsets.only(bottom: 8),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(AppColorConstant.naturalGray),
-                      ),
+                      border: Border.all(color: Color(AppColorConstant.gray)),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -414,7 +383,7 @@ class ActivityScreen extends StatelessWidget {
                               margin: EdgeInsets.only(right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: Color(AppColorConstant.naturalWhite),
+                                  color: Color(AppColorConstant.white),
                                 ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
@@ -437,7 +406,7 @@ class ActivityScreen extends StatelessWidget {
                                 Text(
                                   "Sarah",
                                   style: TextStyle(
-                                    color: Color(AppColorConstant.naturalWhite),
+                                    color: Color(AppColorConstant.white),
                                   ),
                                 ),
                                 SizedBox(height: 4),
@@ -447,9 +416,7 @@ class ActivityScreen extends StatelessWidget {
                                     Text(
                                       "Liked your post ",
                                       style: TextStyle(
-                                        color: Color(
-                                          AppColorConstant.naturalWhite,
-                                        ),
+                                        color: Color(AppColorConstant.white),
                                         fontSize: 10,
                                       ),
                                     ),
@@ -486,9 +453,7 @@ class ActivityScreen extends StatelessWidget {
                     margin: EdgeInsets.only(bottom: 8),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(AppColorConstant.naturalGray),
-                      ),
+                      border: Border.all(color: Color(AppColorConstant.gray)),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -504,7 +469,7 @@ class ActivityScreen extends StatelessWidget {
                               margin: EdgeInsets.only(right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: Color(AppColorConstant.naturalWhite),
+                                  color: Color(AppColorConstant.white),
                                 ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
@@ -527,7 +492,7 @@ class ActivityScreen extends StatelessWidget {
                                 Text(
                                   "Sarah",
                                   style: TextStyle(
-                                    color: Color(AppColorConstant.naturalWhite),
+                                    color: Color(AppColorConstant.white),
                                   ),
                                 ),
                                 SizedBox(height: 4),
@@ -537,9 +502,7 @@ class ActivityScreen extends StatelessWidget {
                                     Text(
                                       "Liked your post ",
                                       style: TextStyle(
-                                        color: Color(
-                                          AppColorConstant.naturalWhite,
-                                        ),
+                                        color: Color(AppColorConstant.white),
                                         fontSize: 10,
                                       ),
                                     ),
@@ -576,9 +539,7 @@ class ActivityScreen extends StatelessWidget {
                     margin: EdgeInsets.only(bottom: 8),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(AppColorConstant.naturalGray),
-                      ),
+                      border: Border.all(color: Color(AppColorConstant.gray)),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -594,7 +555,7 @@ class ActivityScreen extends StatelessWidget {
                               margin: EdgeInsets.only(right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: Color(AppColorConstant.naturalWhite),
+                                  color: Color(AppColorConstant.white),
                                 ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
@@ -617,7 +578,7 @@ class ActivityScreen extends StatelessWidget {
                                 Text(
                                   "Sarah",
                                   style: TextStyle(
-                                    color: Color(AppColorConstant.naturalWhite),
+                                    color: Color(AppColorConstant.white),
                                   ),
                                 ),
                                 SizedBox(height: 4),
@@ -627,9 +588,7 @@ class ActivityScreen extends StatelessWidget {
                                     Text(
                                       "Liked your post ",
                                       style: TextStyle(
-                                        color: Color(
-                                          AppColorConstant.naturalWhite,
-                                        ),
+                                        color: Color(AppColorConstant.white),
                                         fontSize: 10,
                                       ),
                                     ),
